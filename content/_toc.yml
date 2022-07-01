@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: exercises/teacher-workshop
+  sections:
+  - file: exercises/jupyter-notebook-tutorial
+  - file: exercises/Hunting-the-Higgs-4leptons
