@@ -381,7 +381,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-data">
-   Reading data
+   2. Reading data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -444,7 +444,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-data">
-   Reading data
+   2. Reading data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -609,7 +609,7 @@ Vector sums:  [[12 13]
 </div>
 </section>
 <section id="reading-data">
-<h2>Reading data<a class="headerlink" href="#reading-data" title="Permalink to this headline">#</a></h2>
+<h2>2. Reading data<a class="headerlink" href="#reading-data" title="Permalink to this headline">#</a></h2>
 <p>You can import a dataset into a notebook with an open link. In order to read datasets we need the library pandas and the <strong>read_csv()</strong>-method. The CSV (comma-separated values) file type is a useful way for saving data into a text file. Using the <strong>head()</strong>-method we can look at the first five lines of the dataset.</p>
 <p>Let’s try this with <a class="reference external" href="http://opendata.cern.ch/">open data</a> from the CMS experiment at CERN.</p>
 <div class="cell docutils container">
@@ -772,7 +772,7 @@ Name: 1, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_muons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;</span><span class="p">)</span>
-<span class="n">two_muons</span>
+<span class="n">two_muons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -832,7 +832,7 @@ Name: 1, dtype: float64
       <td>1.234060</td>
       <td>-1</td>
       <td>5.20755</td>
-      <td>-1.550160</td>
+      <td>-1.55016</td>
       <td>-1.819760</td>
       <td>4.62525</td>
       <td>2.39050</td>
@@ -855,7 +855,7 @@ Name: 1, dtype: float64
       <td>-0.456026</td>
       <td>-1</td>
       <td>10.72950</td>
-      <td>6.294760</td>
+      <td>6.29476</td>
       <td>-2.524410</td>
       <td>-8.31349</td>
       <td>6.78208</td>
@@ -878,7 +878,7 @@ Name: 1, dtype: float64
       <td>1.631640</td>
       <td>-1</td>
       <td>6.90202</td>
-      <td>-3.024390</td>
+      <td>-3.02439</td>
       <td>3.751290</td>
       <td>4.94041</td>
       <td>4.81862</td>
@@ -901,7 +901,7 @@ Name: 1, dtype: float64
       <td>0.390686</td>
       <td>1</td>
       <td>7.43461</td>
-      <td>-5.060690</td>
+      <td>-5.06069</td>
       <td>4.408010</td>
       <td>3.19704</td>
       <td>6.71127</td>
@@ -924,7 +924,7 @@ Name: 1, dtype: float64
       <td>0.144435</td>
       <td>-1</td>
       <td>9.27485</td>
-      <td>-3.646960</td>
+      <td>-3.64696</td>
       <td>-0.276874</td>
       <td>8.52260</td>
       <td>3.65745</td>
@@ -933,147 +933,8 @@ Name: 1, dtype: float64
       <td>1</td>
       <td>40.98300</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>99995</th>
-      <td>GG</td>
-      <td>146510</td>
-      <td>209126492</td>
-      <td>17.86720</td>
-      <td>-2.053890</td>
-      <td>2.70372</td>
-      <td>17.54130</td>
-      <td>3.39538</td>
-      <td>2.344530</td>
-      <td>2.220450</td>
-      <td>1</td>
-      <td>16.26420</td>
-      <td>-3.914730</td>
-      <td>-12.028600</td>
-      <td>10.22260</td>
-      <td>12.64960</td>
-      <td>0.739009</td>
-      <td>-1.885440</td>
-      <td>1</td>
-      <td>16.47860</td>
-    </tr>
-    <tr>
-      <th>99996</th>
-      <td>GT</td>
-      <td>146510</td>
-      <td>209181268</td>
-      <td>22.45350</td>
-      <td>2.991560</td>
-      <td>-12.67420</td>
-      <td>-18.29110</td>
-      <td>13.02240</td>
-      <td>-1.140640</td>
-      <td>-1.339000</td>
-      <td>1</td>
-      <td>4.71292</td>
-      <td>-0.250232</td>
-      <td>-2.176830</td>
-      <td>-4.17124</td>
-      <td>2.19117</td>
-      <td>-1.399700</td>
-      <td>-1.685250</td>
-      <td>-1</td>
-      <td>2.32171</td>
-    </tr>
-    <tr>
-      <th>99997</th>
-      <td>GT</td>
-      <td>146510</td>
-      <td>209199660</td>
-      <td>8.09128</td>
-      <td>-1.805550</td>
-      <td>-2.29272</td>
-      <td>-7.54593</td>
-      <td>2.91832</td>
-      <td>-1.678600</td>
-      <td>-2.237880</td>
-      <td>-1</td>
-      <td>4.33412</td>
-      <td>1.778710</td>
-      <td>-2.187670</td>
-      <td>-3.28995</td>
-      <td>2.81952</td>
-      <td>-0.994575</td>
-      <td>-0.888141</td>
-      <td>1</td>
-      <td>4.11094</td>
-    </tr>
-    <tr>
-      <th>99998</th>
-      <td>GT</td>
-      <td>146510</td>
-      <td>209209004</td>
-      <td>9.72188</td>
-      <td>4.608720</td>
-      <td>2.11413</td>
-      <td>-8.29421</td>
-      <td>5.07049</td>
-      <td>-1.267800</td>
-      <td>0.430085</td>
-      <td>1</td>
-      <td>5.13298</td>
-      <td>3.917130</td>
-      <td>0.749418</td>
-      <td>-3.22967</td>
-      <td>3.98817</td>
-      <td>-0.740312</td>
-      <td>0.189034</td>
-      <td>-1</td>
-      <td>2.64139</td>
-    </tr>
-    <tr>
-      <th>99999</th>
-      <td>GG</td>
-      <td>146510</td>
-      <td>209458092</td>
-      <td>31.97880</td>
-      <td>-11.464500</td>
-      <td>-3.15066</td>
-      <td>29.68620</td>
-      <td>11.88960</td>
-      <td>1.646050</td>
-      <td>-2.873400</td>
-      <td>-1</td>
-      <td>10.46080</td>
-      <td>-2.360030</td>
-      <td>7.665790</td>
-      <td>6.71436</td>
-      <td>8.02085</td>
-      <td>0.761387</td>
-      <td>1.869450</td>
-      <td>1</td>
-      <td>16.26690</td>
-    </tr>
   </tbody>
 </table>
-<p>100000 rows × 20 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1107,7 +968,7 @@ Name: 1, dtype: float64
 <h2>4. Additional material<a class="headerlink" href="#additional-material" title="Permalink to this headline">#</a></h2>
 <p>In the dataset we chose the invariant mass had already been calculated. Often we have to calculate the variable we are interested in ourselves. Let’s now try to calculate the invariant mass of two muons.</p>
 <p>The square of the invariant mass of two particles is given by
-$<span class="math notranslate nohighlight">\( M^2 = (E_1+E_2)^2-|| p_1+p_2 ||^2 = (E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2) \)</span>$</p>
+<span class="math notranslate nohighlight">\( M^2 = (E_1+E_2)^2-|| p_1+p_2 ||^2 = (E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2) \)</span></p>
 <p>Now we can calculate the invariant mass knowing that we can choose the variables by two_muons[‘E1’] etc. Remember that before every complex mathematical function you must define that it comes from the numpy package, which we imported and which we defined as np (e.g. np.sqrt(your_value)).</p>
 <p>As an extra challenge, note that it happens that one value of the newly computed invariant mass squared goes below 0 (sorry, this is real data) so we will have to exclude that from our set of values before taking the square root… not that nice but a good occasion to show how you can very efficiently set a selection criteria in a dataset with “pandas”</p>
 <div class="cell docutils container">
@@ -1121,7 +982,7 @@ $<span class="math notranslate nohighlight">\( M^2 = (E_1+E_2)^2-|| p_1+p_2 ||^2
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mass_squared_pos</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">120</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mass_squared_pos</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">120</span><span class="p">])</span>
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
