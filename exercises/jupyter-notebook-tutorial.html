@@ -409,8 +409,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass">
-     Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass’.
+    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2">
+     Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass2’.
     </a>
    </li>
   </ul>
@@ -479,8 +479,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass">
-     Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass’.
+    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2">
+     Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass2’.
     </a>
    </li>
   </ul>
@@ -954,13 +954,13 @@ Name: 1, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Save the invariant mass in a variable</span>
-<span class="n">invar_mass</span> <span class="o">=</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="n">invariant_mass1</span> <span class="o">=</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
 
 <span class="c1"># Plot the histogram with the function hist() of the matplotlib.pyplot module:</span>
 <span class="c1"># (http://matplotlib.org/api/pyplot_api.html?highlight=matplotlib.pyplot.hist#matplotlib.pyplot.hist).</span>
 <span class="c1"># &#39;Bins&#39; determines the number of the bins used.</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invar_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass1</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -987,8 +987,8 @@ Name: 1, dtype: float64
 $<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 ||^2} = \sqrt{(E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2)} \)</span>$</p>
 <p>Now we can calculate the invariant mass knowing that we can choose the variables by two_muons[‘E1’] etc. Remember that before every complex mathematical function you must define that it comes from the numpy library, which we imported and which we defined as np (e.g. np.sqrt(your_value)).</p>
 <p>Additionally, we can use powers without the numpy library using the **-operator (e.g. x^2 is written as x**2).</p>
-<section id="exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass">
-<h3>Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass’.<a class="headerlink" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass" title="Permalink to this headline">#</a></h3>
+<section id="exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2">
+<h3>Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass2’.<a class="headerlink" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
@@ -1000,7 +1000,7 @@ $<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass2</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -1012,7 +1012,20 @@ $<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/jupyter-notebook-tutorial_33_0.png" src="../_images/jupyter-notebook-tutorial_33_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [14],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass2</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Name the axes and give the title</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;invariant_mass2&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x720 with 0 Axes&gt;
+</pre></div>
+</div>
 </div>
 </div>
 <p>We see that there appears a peak at around 91 GeV. This is because the muons are from a particle that has a mass of 91 GeV. This particle is known as Z-boson.</p>
