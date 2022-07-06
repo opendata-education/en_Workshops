@@ -4,7 +4,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>What is the Jupyter Notebook? &#8212; Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -34,10 +35,13 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -391,6 +395,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#plotting">
    3. Plotting
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram">
+     Exercise: Choose another dataset and plot a similar histogram.
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#additional-material">
@@ -398,8 +409,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram">
-     Exercise: Choose another dataset and plot a similar histogram.
+    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass">
+     Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass’.
     </a>
    </li>
   </ul>
@@ -454,6 +465,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#plotting">
    3. Plotting
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram">
+     Exercise: Choose another dataset and plot a similar histogram.
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#additional-material">
@@ -461,8 +479,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram">
-     Exercise: Choose another dataset and plot a similar histogram.
+    <a class="reference internal nav-link" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass">
+     Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass’.
     </a>
    </li>
   </ul>
@@ -477,7 +495,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="what-is-the-jupyter-notebook">
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-the-jupyter-notebook">
 <h1>What is the Jupyter Notebook?<a class="headerlink" href="#what-is-the-jupyter-notebook" title="Permalink to this headline">#</a></h1>
 <p>Hey! This platform is the <strong>Jupyter Notebook</strong> where you can process text, code, images and data interactively. These documents are called “notebooks”.</p>
 <p>The Jupyter Notebook works in your internet browser, which means that there is no need to install anything. This makes the notebooks easy to learn and use.</p>
@@ -502,13 +520,13 @@ title="Print to PDF"
 </div>
 </div>
 <p>Above we have a code cell that contains a short calculation. You can print the result by running the cell. On the left side of the cell there are square brackets. If there reads <strong>In [*]</strong> inside the brackets, it means that the the execution of the cell is still in progress. When the cell has been run, a number appears inside the square brackets. The numbers tell in which order the cells have been run. If you ran the above cell once, there should be 1 inside the brackets. If you now run the cell for the second time, the number should change to 2.</p>
-<div class="section" id="exercise-modify-this-text-cell-by-adding-a-sentence-that-describes-what-weather-it-is-today">
+<section id="exercise-modify-this-text-cell-by-adding-a-sentence-that-describes-what-weather-it-is-today">
 <h2>Exercise: Modify this text cell by adding a sentence that describes what weather it is today.<a class="headerlink" href="#exercise-modify-this-text-cell-by-adding-a-sentence-that-describes-what-weather-it-is-today" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="exercise-add-a-new-code-cell-and-calculate-an-arbitrary-sum-to-the-variable-b">
+</section>
+<section id="exercise-add-a-new-code-cell-and-calculate-an-arbitrary-sum-to-the-variable-b">
 <h2>Exercise: Add a new code cell and calculate an arbitrary sum to the variable b.<a class="headerlink" href="#exercise-add-a-new-code-cell-and-calculate-an-arbitrary-sum-to-the-variable-b" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="python-libraries">
+</section>
+<section id="python-libraries">
 <h2>1. Python libraries<a class="headerlink" href="#python-libraries" title="Permalink to this headline">#</a></h2>
 <p>When using Python we take use of different libraries, each of which has a unique collection of functions. The libraries we use the most are</p>
 <ul class="simple">
@@ -603,8 +621,8 @@ Vector sums:  [[12 13]
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="reading-data">
+</section>
+<section id="reading-data">
 <h2>2. Reading data<a class="headerlink" href="#reading-data" title="Permalink to this headline">#</a></h2>
 <p>You can import a dataset into a notebook with an open link. In order to read datasets we need the library pandas and the <strong>read_csv()</strong>-method. The CSV (comma-separated values) file type is a useful way for saving data into a text file. Using the <strong>head()</strong>-method we can look at the first five lines of the dataset.</p>
 <p>Let’s try this with <a class="reference external" href="http://opendata.cern.ch/">open data</a> from the CMS experiment at CERN.</p>
@@ -750,11 +768,11 @@ Name: 1, dtype: float64
 </div>
 </div>
 </div>
-<div class="section" id="exercise-open-another-dataset-from-the-cms-experiment-to-this-notebook">
+<section id="exercise-open-another-dataset-from-the-cms-experiment-to-this-notebook">
 <h3>Exercise: Open another dataset from the CMS experiment to this notebook.<a class="headerlink" href="#exercise-open-another-dataset-from-the-cms-experiment-to-this-notebook" title="Permalink to this headline">#</a></h3>
-</div>
-</div>
-<div class="section" id="plotting">
+</section>
+</section>
+<section id="plotting">
 <h2>3. Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">#</a></h2>
 <p>In order to plot functions we need the matplotlib.pyplot library. We also need the numpy library but we don’t have to import it now since we did it earlier.</p>
 <div class="cell docutils container">
@@ -767,7 +785,7 @@ Name: 1, dtype: float64
 <p>Let’s import another dataset and make a histogram of its invariant mass.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_muons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_muons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/307/files/Zmumu.csv&quot;</span><span class="p">)</span>
 <span class="n">two_muons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -817,117 +835,117 @@ Name: 1, dtype: float64
     <tr>
       <th>0</th>
       <td>GT</td>
-      <td>146511</td>
-      <td>25343052</td>
-      <td>7.33390</td>
-      <td>2.060420</td>
-      <td>5.88580</td>
-      <td>-3.85836</td>
-      <td>6.23602</td>
-      <td>-0.584812</td>
-      <td>1.234060</td>
-      <td>-1</td>
-      <td>5.20755</td>
-      <td>-1.55016</td>
-      <td>-1.819760</td>
-      <td>4.62525</td>
-      <td>2.39050</td>
-      <td>1.414110</td>
-      <td>-2.276360</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>82.201866</td>
+      <td>-41.195288</td>
+      <td>17.433244</td>
+      <td>-68.964962</td>
+      <td>44.7322</td>
+      <td>-1.217690</td>
+      <td>2.741260</td>
       <td>1</td>
-      <td>11.82820</td>
+      <td>60.621875</td>
+      <td>34.144437</td>
+      <td>-16.119525</td>
+      <td>-47.426984</td>
+      <td>38.8311</td>
+      <td>-1.05139</td>
+      <td>-0.440873</td>
+      <td>-1</td>
+      <td>82.462692</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>GG</td>
-      <td>146511</td>
-      <td>25341481</td>
-      <td>18.46720</td>
-      <td>8.033950</td>
-      <td>-3.94072</td>
-      <td>-16.15410</td>
-      <td>8.94839</td>
-      <td>-1.352990</td>
-      <td>-0.456026</td>
+      <td>TT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>62.344929</td>
+      <td>35.118050</td>
+      <td>-16.570362</td>
+      <td>-48.775247</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>10.72950</td>
-      <td>6.29476</td>
-      <td>-2.524410</td>
-      <td>-8.31349</td>
-      <td>6.78208</td>
-      <td>-1.032390</td>
-      <td>-0.381397</td>
+      <td>82.201866</td>
+      <td>-41.195288</td>
+      <td>17.433244</td>
+      <td>-68.964962</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
       <td>1</td>
-      <td>2.58406</td>
+      <td>83.626204</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>GG</td>
-      <td>146511</td>
-      <td>25390065</td>
-      <td>7.70222</td>
-      <td>-0.248771</td>
-      <td>4.08338</td>
-      <td>6.52511</td>
-      <td>4.09095</td>
-      <td>1.246340</td>
-      <td>1.631640</td>
+      <td>GT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>62.344929</td>
+      <td>35.118050</td>
+      <td>-16.570362</td>
+      <td>-48.775247</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>6.90202</td>
-      <td>-3.02439</td>
-      <td>3.751290</td>
-      <td>4.94041</td>
-      <td>4.81862</td>
-      <td>0.899132</td>
-      <td>2.249320</td>
+      <td>81.582778</td>
+      <td>-40.883323</td>
+      <td>17.299297</td>
+      <td>-68.447255</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
       <td>1</td>
-      <td>3.11929</td>
+      <td>83.308465</td>
     </tr>
     <tr>
       <th>3</th>
       <td>GG</td>
-      <td>146511</td>
-      <td>25391068</td>
-      <td>6.59462</td>
-      <td>5.246510</td>
-      <td>2.16082</td>
-      <td>3.35900</td>
-      <td>5.67407</td>
-      <td>0.561945</td>
-      <td>0.390686</td>
-      <td>1</td>
-      <td>7.43461</td>
-      <td>-5.06069</td>
-      <td>4.408010</td>
-      <td>3.19704</td>
-      <td>6.71127</td>
-      <td>0.459977</td>
-      <td>2.425020</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>60.621875</td>
+      <td>34.144437</td>
+      <td>-16.119525</td>
+      <td>-47.426984</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
       <td>-1</td>
-      <td>10.51920</td>
+      <td>81.582778</td>
+      <td>-40.883323</td>
+      <td>17.299297</td>
+      <td>-68.447255</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
+      <td>1</td>
+      <td>82.149373</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>GG</td>
-      <td>146511</td>
-      <td>25489877</td>
-      <td>45.77350</td>
-      <td>8.864420</td>
-      <td>1.28931</td>
-      <td>-44.88830</td>
-      <td>8.95770</td>
-      <td>-2.314620</td>
-      <td>0.144435</td>
-      <td>-1</td>
-      <td>9.27485</td>
-      <td>-3.64696</td>
-      <td>-0.276874</td>
-      <td>8.52260</td>
-      <td>3.65745</td>
-      <td>1.582250</td>
-      <td>-3.065820</td>
+      <td>GT</td>
+      <td>148031</td>
+      <td>105238546</td>
+      <td>41.826389</td>
+      <td>22.783582</td>
+      <td>15.036444</td>
+      <td>-31.689894</td>
+      <td>27.2981</td>
+      <td>-0.990688</td>
+      <td>0.583351</td>
       <td>1</td>
-      <td>40.98300</td>
+      <td>49.760726</td>
+      <td>-20.177373</td>
+      <td>-9.354149</td>
+      <td>44.513955</td>
+      <td>21.8913</td>
+      <td>1.44434</td>
+      <td>-2.707650</td>
+      <td>-1</td>
+      <td>90.469123</td>
     </tr>
   </tbody>
 </table>
@@ -936,19 +954,19 @@ Name: 1, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Save the invariant mass in a variable</span>
-<span class="n">invariant_mass</span> <span class="o">=</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="n">invar_mass</span> <span class="o">=</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
 
 <span class="c1"># Plot the histogram with the function hist() of the matplotlib.pyplot module:</span>
 <span class="c1"># (http://matplotlib.org/api/pyplot_api.html?highlight=matplotlib.pyplot.hist#matplotlib.pyplot.hist).</span>
 <span class="c1"># &#39;Bins&#39; determines the number of the bins used.</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invar_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The invariant mass of two muons&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="c1">#plt.yscale(&#39;log&#39;) </span>
+
 <span class="c1"># Show the plot.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -958,47 +976,49 @@ Name: 1, dtype: float64
 <img alt="../_images/jupyter-notebook-tutorial_26_0.png" src="../_images/jupyter-notebook-tutorial_26_0.png" />
 </div>
 </div>
-<p>You can check whether log scale looks better. Just edit the cell above, add plt.yscale(‘log’) before plt.show() and run it again.</p>
-</div>
-<div class="section" id="additional-material">
+<section id="exercise-choose-another-dataset-and-plot-a-similar-histogram">
+<h3>Exercise: Choose another dataset and plot a similar histogram.<a class="headerlink" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="additional-material">
 <h2>4. Additional material<a class="headerlink" href="#additional-material" title="Permalink to this headline">#</a></h2>
 <p>In the dataset we chose the invariant mass had already been calculated. Often we have to calculate the variable we are interested in ourselves. Let’s now try to calculate the invariant mass of two muons.</p>
-<p>The square of the invariant mass of two particles is given by
-<span class="math notranslate nohighlight">\( M^2 = (E_1+E_2)^2-|| p_1+p_2 ||^2 = (E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2) \)</span></p>
-<p>Now we can calculate the invariant mass knowing that we can choose the variables by two_muons[‘E1’] etc. Remember that before every complex mathematical function you must define that it comes from the numpy package, which we imported and which we defined as np (e.g. np.sqrt(your_value)).</p>
-<p>As an extra challenge, note that it happens that one value of the newly computed invariant mass squared goes below 0 (sorry, this is real data) so we will have to exclude that from our set of values before taking the square root… not that nice but a good occasion to show how you can very efficiently set a selection criteria in a dataset with “pandas”</p>
+<p>The invariant mass of two particles is given by
+$<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 ||^2} = \sqrt{(E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2)} \)</span>$</p>
+<p>Now we can calculate the invariant mass knowing that we can choose the variables by two_muons[‘E1’] etc. Remember that before every complex mathematical function you must define that it comes from the numpy library, which we imported and which we defined as np (e.g. np.sqrt(your_value)).</p>
+<p>Additionally, we can use powers without the numpy library using the **-operator (e.g. x^2 is written as x**2).</p>
+<section id="exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass">
+<h3>Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass’.<a class="headerlink" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mass_squared</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;E1&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;E2&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="p">((</span><span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;px1 &#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;px2&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span><span class="p">(</span><span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;py1&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;py2&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>  <span class="o">+</span><span class="p">(</span><span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;pz1&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;pz2&#39;</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">mass_squared_pos</span> <span class="o">=</span> <span class="n">mass_squared</span><span class="p">[(</span><span class="n">mass_squared</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Run the code below to plot a histogram using the values of invariant mass that you calculated. Does it look similar to the one we plotted earlier?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mass_squared_pos</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">120</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The invariant mass of two muons&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="c1">#plt.yscale(&#39;log&#39;)</span>
 <span class="c1">#Show the plot.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/jupyter-notebook-tutorial_31_0.png" src="../_images/jupyter-notebook-tutorial_31_0.png" />
+<img alt="../_images/jupyter-notebook-tutorial_33_0.png" src="../_images/jupyter-notebook-tutorial_33_0.png" />
 </div>
 </div>
-<div class="section" id="exercise-choose-another-dataset-and-plot-a-similar-histogram">
-<h3>Exercise: Choose another dataset and plot a similar histogram.<a class="headerlink" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram" title="Permalink to this headline">#</a></h3>
-</div>
-</div>
-</div>
+<p>We see that there appears a peak at around 91 GeV. This is because the muons are from a particle that has a mass of 91 GeV. This particle is known as Z-boson.</p>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
