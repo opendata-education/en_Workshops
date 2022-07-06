@@ -1,1 +1,0 @@
-# CERN Teacher workshop
