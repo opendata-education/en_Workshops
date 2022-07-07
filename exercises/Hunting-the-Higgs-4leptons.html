@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Higgs hunting - an example of scientific research &#8212; Workshops</title>
+    <title>&lt;no title&gt; &#8212; Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -115,25 +115,20 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="teacher-workshop.html">
    CERN Teacher workshop
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="jupyter-notebook-tutorial.html">
      What is the Jupyter Notebook?
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Higgs hunting - an example of scientific research
     </a>
    </li>
   </ul>
@@ -206,53 +201,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/en_Workshops/main?urlpath=tree/content/exercises/Hunting-the-Higgs-4leptons.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/opendata-education/en_Workshops/blob/main/content/exercises/Hunting-the-Higgs-4leptons.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -357,23 +305,50 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Higgs hunting - an example of scientific research</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -381,550 +356,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="higgs-hunting-an-example-of-scientific-research">
-<h1>Higgs hunting - an example of scientific research<a class="headerlink" href="#higgs-hunting-an-example-of-scientific-research" title="Permalink to this headline">#</a></h1>
-<p>This notebook serves as an example of how many areas of science work by taking a look at how the <a class="reference external" href="https://en.wikipedia.org/wiki/Higgs_boson">Higgs boson</a> was discovered.</p>
-<p>The data we use here is actual, meaningful data from the CMS experiment that confirmed the existence of this elusive particle, which then resulted in a Nobel prize. Instead of simply presenting it in ready-made graphs, it is now yours to explore. The example is based on the original code in [http://opendata.cern.ch/record/5500] on the CERN Open Data portal (Jomhari, Nur Zulaiha; Geiser, Achim; Bin Anuar, Afiq Aizuddin; (2017). Higgs-to-four-lepton analysis example using 2011-2012 data. CERN Open Data Portal. DOI:10.7483/OPENDATA.CMS.JKB8.RR42), and made into a notebook by Tom McCauley (University of Notre Dame) and Peitsa Veteli (Helsinki Institute of Physics).</p>
-<p>The method used is fairly common and useful for many purposes. First, we present some theoretical background, then we make measurements and try to see if those measurements contain something that correlates or clashes with our assumptions. Perhaps the results confirm our expectations, bring up new questions to look into, force us to adapt our theories, or require entirely new ones to explain them. This cycle then continues time and time again.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data for later use.</span>
-
-<span class="n">csvs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/en_Physics/main/content/Data/4mu_2011.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/en_Physics/main/content/Data/4e_2011.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/en_Physics/main/content/Data/2e2mu_2011.csv&#39;</span><span class="p">)]</span>
-<span class="n">csvs</span> <span class="o">+=</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/en_Physics/main/content/Data/4mu_2012.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/en_Physics/main/content/Data/4e_2012.csv&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/en_Physics/main/content/Data/2e2mu_2012.csv&#39;</span><span class="p">)]</span>
-
-<span class="n">fourlep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">csvs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>According to the Standard Model, one of the ways the Higgs boson can decay is by first creating two Z bosons that then decay further into four leptons (electrons, muons, etc.). It is not the only process with such a final state, of course, so one has to sift through quite a lot of noise to see that happening. The theory does not say too much about what the mass of Higgs could be, but some clever assumptions and enlightened guesses can get you pretty far. For example, four lepton decay is very dominant in some mass regions, which then guides our search.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let us set some values here in regards to the region we are looking at.</span>
-
-<span class="n">rmin</span> <span class="o">=</span> <span class="mi">70</span>
-<span class="n">rmax</span> <span class="o">=</span> <span class="mi">181</span>
-<span class="n">nbins</span> <span class="o">=</span> <span class="mi">37</span>
-
-<span class="n">M_hist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">fourlep</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">nbins</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">))</span>
-
-<span class="n">hist</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">M_hist</span>
-<span class="n">width</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">*</span><span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let us look at some simulations from other processes there. Here are some <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> -simulated values for such events that have already been weighted by luminosity, cross-section, and number of events. Basically, we create a set of values that have some randomness in them, just like a real measurement would have, but which follows the distribution that has been observed in those processes.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.354797</span><span class="p">,</span><span class="mf">0.177398</span><span class="p">,</span><span class="mf">2.60481</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.177398</span><span class="p">,</span><span class="mf">0.177398</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.177398</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.177398</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">ttbar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.0139526</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mf">0.00465086</span><span class="p">,</span><span class="mf">0.0139526</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">zz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.181215</span><span class="p">,</span><span class="mf">0.257161</span><span class="p">,</span><span class="mf">0.44846</span><span class="p">,</span><span class="mf">0.830071</span><span class="p">,</span><span class="mf">1.80272</span><span class="p">,</span><span class="mf">4.57354</span><span class="p">,</span><span class="mf">13.9677</span><span class="p">,</span><span class="mf">14.0178</span><span class="p">,</span><span class="mf">4.10974</span><span class="p">,</span><span class="mf">1.58934</span><span class="p">,</span><span class="mf">0.989974</span><span class="p">,</span><span class="mf">0.839775</span><span class="p">,</span><span class="mf">0.887188</span><span class="p">,</span><span class="mf">0.967021</span><span class="p">,</span><span class="mf">1.07882</span><span class="p">,</span><span class="mf">1.27942</span><span class="p">,</span><span class="mf">1.36681</span><span class="p">,</span><span class="mf">1.4333</span><span class="p">,</span><span class="mf">1.45141</span><span class="p">,</span><span class="mf">1.41572</span><span class="p">,</span><span class="mf">1.51464</span><span class="p">,</span><span class="mf">1.45026</span><span class="p">,</span><span class="mf">1.47328</span><span class="p">,</span><span class="mf">1.42899</span><span class="p">,</span><span class="mf">1.38757</span><span class="p">,</span><span class="mf">1.33561</span><span class="p">,</span><span class="mf">1.3075</span><span class="p">,</span><span class="mf">1.29831</span><span class="p">,</span><span class="mf">1.31402</span><span class="p">,</span><span class="mf">1.30672</span><span class="p">,</span><span class="mf">1.36442</span><span class="p">,</span><span class="mf">1.39256</span><span class="p">,</span><span class="mf">1.43472</span><span class="p">,</span><span class="mf">1.58321</span><span class="p">,</span><span class="mf">1.85313</span><span class="p">,</span><span class="mf">2.19304</span><span class="p">,</span><span class="mf">2.95083</span><span class="p">])</span>
-<span class="n">hzz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00340992</span><span class="p">,</span><span class="mf">0.00450225</span><span class="p">,</span><span class="mf">0.00808944</span><span class="p">,</span><span class="mf">0.0080008</span><span class="p">,</span><span class="mf">0.00801578</span><span class="p">,</span><span class="mf">0.0108945</span><span class="p">,</span><span class="mf">0.00794274</span><span class="p">,</span><span class="mf">0.00950757</span><span class="p">,</span><span class="mf">0.0130648</span><span class="p">,</span><span class="mf">0.0163568</span><span class="p">,</span><span class="mf">0.0233832</span><span class="p">,</span><span class="mf">0.0334813</span><span class="p">,</span><span class="mf">0.0427229</span><span class="p">,</span><span class="mf">0.0738129</span><span class="p">,</span><span class="mf">0.13282</span><span class="p">,</span><span class="mf">0.256384</span><span class="p">,</span><span class="mf">0.648352</span><span class="p">,</span><span class="mf">2.38742</span><span class="p">,</span><span class="mf">4.87193</span><span class="p">,</span><span class="mf">0.944299</span><span class="p">,</span><span class="mf">0.155005</span><span class="p">,</span><span class="mf">0.0374193</span><span class="p">,</span><span class="mf">0.0138906</span><span class="p">,</span><span class="mf">0.00630364</span><span class="p">,</span><span class="mf">0.00419265</span><span class="p">,</span><span class="mf">0.00358719</span><span class="p">,</span><span class="mf">0.00122527</span><span class="p">,</span><span class="mf">0.000885718</span><span class="p">,</span><span class="mf">0.000590479</span><span class="p">,</span><span class="mf">0.000885718</span><span class="p">,</span><span class="mf">0.000797085</span><span class="p">,</span><span class="mf">8.86337e-05</span><span class="p">,</span><span class="mf">0.000501845</span><span class="p">,</span><span class="mf">8.86337e-05</span><span class="p">,</span><span class="mf">0.000546162</span><span class="p">,</span><span class="mf">4.43168e-05</span><span class="p">,</span><span class="mf">8.86337e-05</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let us take a look at those numbers and how they contribute to what we will measure in the accelerator.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ZZ, a pair of heavier bosons.</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">zz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_9_0.png" src="../_images/Hunting-the-Higgs-4leptons_9_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DY, some irreducible background from singular Z bosons.</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_10_0.png" src="../_images/Hunting-the-Higgs-4leptons_10_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ttbar, a pair of top and anti-top quarks.</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_11_0.png" src="../_images/Hunting-the-Higgs-4leptons_11_0.png" />
-</div>
-</div>
-<p>Let us stack them together and see what kind of shape we might expect from the experiment.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-
-<span class="c1"># ttbar </span>
-<span class="n">ttbar_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-                    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$t\bar</span><span class="si">{t}</span><span class="s1">$&#39;</span><span class="p">)</span>
-
-<span class="c1"># DY</span>
-<span class="n">dy_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Z/$\gamma^{*}$ + X&#39;</span><span class="p">)</span>
-
-<span class="c1"># ZZ</span>
-<span class="n">zz_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">zz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="o">+</span><span class="n">dy</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;ZZ $\rightarrow$ 4l&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$ \sqrt</span><span class="si">{s}</span><span class="s1"> = 7$ TeV, L = 2.3 $fb^{-1}$; $\sqrt</span><span class="si">{s}</span><span class="s1"> = 8$ TeV, L = 11.6 $fb^{-1}$ </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$m_</span><span class="si">{4l}</span><span class="s1">$ (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_13_0.png" src="../_images/Hunting-the-Higgs-4leptons_13_0.png" />
-</div>
-</div>
-<p>So there ought to be something around 90 GeV or so, which makes sense as most of this comes from Z bosons. Let us add our measured data on top of that. How well do they line up?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-
-<span class="n">xerrs</span> <span class="o">=</span> <span class="p">[</span><span class="n">width</span><span class="o">*</span><span class="mf">0.5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nbins</span><span class="p">)]</span>
-<span class="n">yerrs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
-
-<span class="c1"># ttbar </span>
-<span class="n">ttbar_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-                    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$t\bar</span><span class="si">{t}</span><span class="s1">$&#39;</span><span class="p">)</span>
-
-<span class="c1"># DY</span>
-<span class="n">dy_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Z/$\gamma^{*}$ + X&#39;</span><span class="p">)</span>
-
-<span class="c1"># ZZ</span>
-<span class="n">zz_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">zz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="o">+</span><span class="n">dy</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;ZZ $\rightarrow$ 4l&#39;</span><span class="p">)</span>
-
-<span class="c1"># Measured data</span>
-<span class="n">data_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">hist</span><span class="p">,</span> <span class="n">xerr</span> <span class="o">=</span> <span class="n">xerrs</span><span class="p">,</span> <span class="n">yerr</span> <span class="o">=</span> <span class="n">yerrs</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                        <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$ \sqrt</span><span class="si">{s}</span><span class="s1"> = 7$ TeV, L = 2.3 $fb^{-1}$; $\sqrt</span><span class="si">{s}</span><span class="s1"> = 8$ TeV, L = 11.6 $fb^{-1}$ </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$m_</span><span class="si">{4l}</span><span class="s1">$ (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_15_0.png" src="../_images/Hunting-the-Higgs-4leptons_15_0.png" />
-</div>
-</div>
-<p>There are clearly some points in there that do not seem to arise in our simulated processes. For comparison’s sake, physicists made distribution simulations for Higgs at varying masses, one of which is shown here. This graph shows us what the Higgs boson should look like, if it had a mass of 125 GeV.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HZZ, our theoretical assumption of a Higgs via two Z bosons.</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">hzz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;4l invariant mass (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_17_0.png" src="../_images/Hunting-the-Higgs-4leptons_17_0.png" />
-</div>
-</div>
-<p>Bonus question: how can something, that seems to have a mass of roughly 125 GeV decay via two Z bosons, with mass over 90 GeV?</p>
-<p>Add that in the previous graph and see how it lines up.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-
-<span class="c1"># ttbar </span>
-<span class="n">ttbar_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-                    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;$t\bar</span><span class="si">{t}</span><span class="s1">$&#39;</span><span class="p">)</span>
-
-<span class="c1"># DY</span>
-<span class="n">dy_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Z/$\gamma^{*}$ + X&#39;</span><span class="p">)</span>
-
-<span class="c1"># ZZ</span>
-<span class="n">zz_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">zz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="o">+</span><span class="n">dy</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;ZZ $\rightarrow$ 4l&#39;</span><span class="p">)</span>
-
-<span class="c1"># HZZ</span>
-<span class="n">hzz_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">hzz</span><span class="p">,</span> <span class="n">align</span> <span class="o">=</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span>
-                  <span class="n">bottom</span> <span class="o">=</span> <span class="n">ttbar</span><span class="o">+</span><span class="n">dy</span><span class="o">+</span><span class="n">zz</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;$m_</span><span class="si">{H}</span><span class="s1">$ = 125 GeV&#39;</span><span class="p">)</span>
-
-<span class="c1"># Measured data</span>
-<span class="n">data_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">hist</span><span class="p">,</span> <span class="n">xerr</span> <span class="o">=</span> <span class="n">xerrs</span><span class="p">,</span> <span class="n">yerr</span> <span class="o">=</span> <span class="n">yerrs</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
-                        <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;$ \sqrt</span><span class="si">{s}</span><span class="s1"> = 7$ TeV, L = 2.3 $fb^{-1}$; $\sqrt</span><span class="si">{s}</span><span class="s1"> = 8$ TeV, L = 11.6 $fb^{-1}$ </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$m_</span><span class="si">{4l}</span><span class="s1">$ (GeV)&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Events / 3 GeV</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span><span class="n">rmax</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Hunting-the-Higgs-4leptons_19_0.png" src="../_images/Hunting-the-Higgs-4leptons_19_0.png" />
-</div>
-</div>
-<p>This sample seems quite small, and by numerical length it is, but it still gives us an enlightening look at how research is done. There are not very many processes that produce four leptons at the end, so this comprises about half the data that is publicly available from the 2011-2012 run. More precise information about the data can be found <a class="reference external" href="http://opendata.cern.ch/record/5500">here</a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If we take a look at the data, we can see the properties of all four leptons involved.</span>
-
-<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">fourlep</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Run</th>
-      <th>Event</th>
-      <th>PID1</th>
-      <th>E1</th>
-      <th>px1</th>
-      <th>py1</th>
-      <th>pz1</th>
-      <th>pt1</th>
-      <th>eta1</th>
-      <th>phi1</th>
-      <th>Q1</th>
-      <th>PID2</th>
-      <th>E2</th>
-      <th>px2</th>
-      <th>py2</th>
-      <th>pz2</th>
-      <th>pt2</th>
-      <th>eta2</th>
-      <th>phi2</th>
-      <th>Q2</th>
-      <th>PID3</th>
-      <th>E3</th>
-      <th>px3</th>
-      <th>py3</th>
-      <th>pz3</th>
-      <th>pt3</th>
-      <th>eta3</th>
-      <th>phi3</th>
-      <th>Q3</th>
-      <th>PID4</th>
-      <th>E4</th>
-      <th>px4</th>
-      <th>py4</th>
-      <th>pz4</th>
-      <th>pt4</th>
-      <th>eta4</th>
-      <th>phi4</th>
-      <th>Q4</th>
-      <th>mZ1</th>
-      <th>mZ2</th>
-      <th>M</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>173657</td>
-      <td>34442568</td>
-      <td>13</td>
-      <td>35.9978</td>
-      <td>32.7631</td>
-      <td>-4.41922</td>
-      <td>-14.2436</td>
-      <td>33.0598</td>
-      <td>-0.418519</td>
-      <td>-0.134075</td>
-      <td>-1</td>
-      <td>-13</td>
-      <td>29.0804</td>
-      <td>-19.31050</td>
-      <td>-5.31425</td>
-      <td>21.0837</td>
-      <td>20.0284</td>
-      <td>0.918146</td>
-      <td>-2.873040</td>
-      <td>1</td>
-      <td>13</td>
-      <td>17.3154</td>
-      <td>-10.87010</td>
-      <td>-3.64596</td>
-      <td>12.9753</td>
-      <td>11.46530</td>
-      <td>0.971505</td>
-      <td>-2.81797</td>
-      <td>-1</td>
-      <td>-13</td>
-      <td>11.49390</td>
-      <td>-1.20978</td>
-      <td>11.35650</td>
-      <td>1.29029</td>
-      <td>11.42070</td>
-      <td>0.112739</td>
-      <td>1.676920</td>
-      <td>1</td>
-      <td>62.5513</td>
-      <td>20.5205</td>
-      <td>91.4517</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>166512</td>
-      <td>337493970</td>
-      <td>13</td>
-      <td>52.9826</td>
-      <td>-49.9170</td>
-      <td>8.17082</td>
-      <td>15.7696</td>
-      <td>50.5813</td>
-      <td>0.306925</td>
-      <td>2.979340</td>
-      <td>-1</td>
-      <td>13</td>
-      <td>72.1018</td>
-      <td>15.32840</td>
-      <td>21.35470</td>
-      <td>-67.1392</td>
-      <td>26.2866</td>
-      <td>-1.667150</td>
-      <td>0.948222</td>
-      <td>-1</td>
-      <td>-13</td>
-      <td>89.7552</td>
-      <td>10.34670</td>
-      <td>-20.27240</td>
-      <td>86.8214</td>
-      <td>22.76010</td>
-      <td>2.048740</td>
-      <td>-1.09888</td>
-      <td>1</td>
-      <td>-13</td>
-      <td>30.21620</td>
-      <td>2.32913</td>
-      <td>-13.06840</td>
-      <td>27.14400</td>
-      <td>13.27430</td>
-      <td>1.463510</td>
-      <td>-1.394420</td>
-      <td>1</td>
-      <td>92.1352</td>
-      <td>90.2049</td>
-      <td>235.8800</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>171091</td>
-      <td>69105221</td>
-      <td>13</td>
-      <td>165.9750</td>
-      <td>-12.6280</td>
-      <td>-30.22890</td>
-      <td>162.7100</td>
-      <td>32.7605</td>
-      <td>2.305880</td>
-      <td>-1.966510</td>
-      <td>-1</td>
-      <td>-13</td>
-      <td>68.1611</td>
-      <td>6.93837</td>
-      <td>22.85760</td>
-      <td>63.8382</td>
-      <td>23.8875</td>
-      <td>1.709440</td>
-      <td>1.276090</td>
-      <td>1</td>
-      <td>-13</td>
-      <td>19.5056</td>
-      <td>4.71517</td>
-      <td>8.50412</td>
-      <td>16.9087</td>
-      <td>9.72383</td>
-      <td>1.320370</td>
-      <td>1.06454</td>
-      <td>1</td>
-      <td>13</td>
-      <td>24.83870</td>
-      <td>-8.09683</td>
-      <td>3.05681</td>
-      <td>23.28190</td>
-      <td>8.65464</td>
-      <td>1.715610</td>
-      <td>2.780600</td>
-      <td>-1</td>
-      <td>58.3874</td>
-      <td>14.3541</td>
-      <td>79.3858</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>172952</td>
-      <td>559839432</td>
-      <td>13</td>
-      <td>110.2600</td>
-      <td>-69.1510</td>
-      <td>68.83630</td>
-      <td>-51.3524</td>
-      <td>97.5720</td>
-      <td>-0.504613</td>
-      <td>2.358470</td>
-      <td>-1</td>
-      <td>13</td>
-      <td>88.3199</td>
-      <td>85.94400</td>
-      <td>-16.81970</td>
-      <td>-11.4510</td>
-      <td>87.5743</td>
-      <td>-0.130388</td>
-      <td>-0.193263</td>
-      <td>-1</td>
-      <td>-13</td>
-      <td>45.0987</td>
-      <td>-19.98280</td>
-      <td>-29.14080</td>
-      <td>-28.0247</td>
-      <td>35.33410</td>
-      <td>-0.727298</td>
-      <td>-2.17188</td>
-      <td>1</td>
-      <td>-13</td>
-      <td>9.79377</td>
-      <td>3.02072</td>
-      <td>8.34856</td>
-      <td>-4.13324</td>
-      <td>8.87824</td>
-      <td>-0.450186</td>
-      <td>1.223630</td>
-      <td>1</td>
-      <td>91.1877</td>
-      <td>37.3758</td>
-      <td>232.9290</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>167282</td>
-      <td>44166176</td>
-      <td>-13</td>
-      <td>54.3881</td>
-      <td>-27.4999</td>
-      <td>-43.86520</td>
-      <td>-16.6628</td>
-      <td>51.7726</td>
-      <td>-0.316533</td>
-      <td>-2.130770</td>
-      <td>1</td>
-      <td>13</td>
-      <td>39.8417</td>
-      <td>31.53530</td>
-      <td>18.85330</td>
-      <td>15.4088</td>
-      <td>36.7413</td>
-      <td>0.407975</td>
-      <td>0.538835</td>
-      <td>-1</td>
-      <td>-13</td>
-      <td>20.3208</td>
-      <td>3.30081</td>
-      <td>16.01250</td>
-      <td>12.0677</td>
-      <td>16.34910</td>
-      <td>0.683619</td>
-      <td>1.36750</td>
-      <td>1</td>
-      <td>13</td>
-      <td>6.83735</td>
-      <td>4.64276</td>
-      <td>-2.38618</td>
-      <td>4.41465</td>
-      <td>5.22007</td>
-      <td>0.767963</td>
-      <td>-0.474752</td>
-      <td>-1</td>
-      <td>90.7513</td>
-      <td>14.7350</td>
-      <td>119.2900</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>As we can see, there is certainly some activity going on in the 125 GeV region. This data set is too small to say anything for certain, but it is not too far off from actual analysis results. The most telling differences mainly arise from our somewhat rough methods compared to the more sophisticated ones used at CMS.
-<img src = "../images/four-lepton.png" align = 'left'></p>
-</section>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
