@@ -981,7 +981,7 @@ Name: 1, dtype: float64
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of collisions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The invariant mass of two muons&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
 <span class="c1"># Show the plot.</span>
@@ -1001,7 +1001,7 @@ Name: 1, dtype: float64
 <h2>4. Additional material<a class="headerlink" href="#additional-material" title="Permalink to this headline">#</a></h2>
 <p>In the dataset we chose the invariant mass had already been calculated. Often we have to calculate the variable we are interested in ourselves. Let’s now try to calculate the invariant mass of two muons.</p>
 <p>The invariant mass of two particles is given by
-$<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 ||^2} = \sqrt{(E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2)} \)</span>$</p>
+<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 ||^2} = \sqrt{(E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2)} \)</span></p>
 <p>Now we can calculate the invariant mass knowing that we can choose the variables by two_muons[‘E1’] etc. Remember that before every complex mathematical function you must define that it comes from the numpy library, which we imported and which we defined as np (e.g. np.sqrt(your_value)).</p>
 <p>Additionally, we can use powers without the numpy library using the **-operator (e.g. x^2 is written as x**2).</p>
 <section id="exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2">
@@ -1021,7 +1021,7 @@ $<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 
 
 <span class="c1"># Name the axes and give the title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of collisions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The invariant mass of two muons&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="c1">#Show the plot.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
