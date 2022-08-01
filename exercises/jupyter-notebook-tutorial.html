@@ -564,7 +564,7 @@ title="Print to PDF"
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1">#Import the numpy-library and give it an abbrevation for calling functions</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">#Do the same for the other libraries</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
@@ -659,16 +659,99 @@ Vector sums:  [[12 13]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">AttributeError</span>: module &#39;matplotlib.pyplot&#39; has no attribute &#39;read_csv&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>199319</td>
+      <td>641436592</td>
+      <td>77.2006</td>
+      <td>0.250438</td>
+      <td>0.605505</td>
+      <td>60.1382</td>
+      <td>0.650821</td>
+      <td>-1.53900</td>
+      <td>122.797901</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>199699</td>
+      <td>336259924</td>
+      <td>64.1091</td>
+      <td>0.473667</td>
+      <td>-0.815133</td>
+      <td>58.6038</td>
+      <td>0.032018</td>
+      <td>2.58568</td>
+      <td>124.586979</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>201602</td>
+      <td>114902683</td>
+      <td>73.7489</td>
+      <td>0.800788</td>
+      <td>0.261020</td>
+      <td>55.9369</td>
+      <td>0.698872</td>
+      <td>3.03502</td>
+      <td>126.462830</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>202087</td>
+      <td>923352992</td>
+      <td>102.9550</td>
+      <td>0.979959</td>
+      <td>0.148624</td>
+      <td>76.6940</td>
+      <td>0.815527</td>
+      <td>1.67359</td>
+      <td>123.622542</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>203894</td>
+      <td>688901524</td>
+      <td>53.4409</td>
+      <td>-0.709665</td>
+      <td>1.642300</td>
+      <td>46.4314</td>
+      <td>0.945537</td>
+      <td>-2.71670</td>
+      <td>123.203887</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>You can choose a specific variable from the data in the following way:</p>
 <div class="cell docutils container">
@@ -684,15 +767,27 @@ Vector sums:  [[12 13]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [9],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Choosing a specific column</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">invariant_mass</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">invariant_mass</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Choosing a specific row</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    122.797901
+1    124.586979
+2    126.462830
+3    123.622542
+4    123.203887
+5    124.444405
+6    124.776915
+7    125.704971
+8    125.691479
+9    123.273271
+Name: M, dtype: float64
+Run      1.996990e+05
+Event    3.362599e+08
+pt1      6.410910e+01
+eta1     4.736670e-01
+phi1    -8.151330e-01
+pt2      5.860380e+01
+eta2     3.201850e-02
+phi2     2.585680e+00
+M        1.245870e+02
+Name: 1, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -713,16 +808,165 @@ Vector sums:  [[12 13]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [10],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">two_muons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/307/files/Zmumu.csv&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">two_muons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">AttributeError</span>: module &#39;matplotlib.pyplot&#39; has no attribute &#39;read_csv&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Type</th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>Q1</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>82.201866</td>
+      <td>-41.195288</td>
+      <td>17.433244</td>
+      <td>-68.964962</td>
+      <td>44.7322</td>
+      <td>-1.217690</td>
+      <td>2.741260</td>
+      <td>1</td>
+      <td>60.621875</td>
+      <td>34.144437</td>
+      <td>-16.119525</td>
+      <td>-47.426984</td>
+      <td>38.8311</td>
+      <td>-1.05139</td>
+      <td>-0.440873</td>
+      <td>-1</td>
+      <td>82.462692</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>62.344929</td>
+      <td>35.118050</td>
+      <td>-16.570362</td>
+      <td>-48.775247</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
+      <td>-1</td>
+      <td>82.201866</td>
+      <td>-41.195288</td>
+      <td>17.433244</td>
+      <td>-68.964962</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
+      <td>1</td>
+      <td>83.626204</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GT</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>62.344929</td>
+      <td>35.118050</td>
+      <td>-16.570362</td>
+      <td>-48.775247</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
+      <td>-1</td>
+      <td>81.582778</td>
+      <td>-40.883323</td>
+      <td>17.299297</td>
+      <td>-68.447255</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
+      <td>1</td>
+      <td>83.308465</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GG</td>
+      <td>148031</td>
+      <td>10507008</td>
+      <td>60.621875</td>
+      <td>34.144437</td>
+      <td>-16.119525</td>
+      <td>-47.426984</td>
+      <td>38.8311</td>
+      <td>-1.051390</td>
+      <td>-0.440873</td>
+      <td>-1</td>
+      <td>81.582778</td>
+      <td>-40.883323</td>
+      <td>17.299297</td>
+      <td>-68.447255</td>
+      <td>44.7322</td>
+      <td>-1.21769</td>
+      <td>2.741260</td>
+      <td>1</td>
+      <td>82.149373</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GT</td>
+      <td>148031</td>
+      <td>105238546</td>
+      <td>41.826389</td>
+      <td>22.783582</td>
+      <td>15.036444</td>
+      <td>-31.689894</td>
+      <td>27.2981</td>
+      <td>-0.990688</td>
+      <td>0.583351</td>
+      <td>1</td>
+      <td>49.760726</td>
+      <td>-20.177373</td>
+      <td>-9.354149</td>
+      <td>44.513955</td>
+      <td>21.8913</td>
+      <td>1.44434</td>
+      <td>-2.707650</td>
+      <td>-1</td>
+      <td>90.469123</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -746,19 +990,7 @@ Vector sums:  [[12 13]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Save the invariant mass in a variable</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">invariant_mass1</span> <span class="o">=</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Plot the histogram with the function hist() of the matplotlib.pyplot module:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># (http://matplotlib.org/api/pyplot_api.html?highlight=matplotlib.pyplot.hist#matplotlib.pyplot.hist).</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># &#39;Bins&#39; determines the number of the bins used.</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;two_muons&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/jupyter-notebook-tutorial_25_0.png" src="../_images/jupyter-notebook-tutorial_25_0.png" />
 </div>
 </div>
 <section id="exercise-choose-another-dataset-and-plot-a-similar-histogram">
@@ -799,12 +1031,16 @@ Vector sums:  [[12 13]
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [13],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass2</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="nn">Input In [13],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass2</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Name the axes and give the title</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ne">NameError</span>: name &#39;invariant_mass2&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x720 with 0 Axes&gt;
 </pre></div>
 </div>
 </div>
