@@ -452,7 +452,7 @@ title="Print to PDF"
 <section id="this-template-is-made-for-you-to-customize">
 <h2>This template is made for you to customize.<a class="headerlink" href="#this-template-is-made-for-you-to-customize" title="Permalink to this headline">#</a></h2>
 <p>If you want to work with a specific column in your data set, or maybe even several columns, here is a simple way to plot a line chart from a column. In this example we use a data set from <a class="reference external" href="https://ourworldindata.org/space-exploration-satellites">here</a>, which shows the number of near-Earth asteroids observed since 1900 and their size categories.</p>
-<p>Go ahead and use this template if you want to make a line chart from a row of your data file (or you can use the example data set). You just have to replace the data set and variable names, and add some text. If you have any problems and you cannot find an answer from Google, please do contact us! We are happy to help you.</p>
+<p>Go ahead and use this template if you want to make a line chart from a column of your data file (or you can use the example data set). You just have to replace the data set and variable names, and add some text. If you have any problems and you cannot find an answer from Google, please do contact us! We are happy to help you.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries </span>
@@ -555,12 +555,12 @@ title="Print to PDF"
 <span class="c1"># Put the header of the column you want inside the square brackets</span>
 
 <span class="n">years</span> <span class="o">=</span> <span class="n">asteroids</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
-<span class="n">years</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     1900
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     1900
 1     1910
 2     1920
 3     1930
