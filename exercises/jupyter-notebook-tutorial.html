@@ -441,8 +441,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram">
-     Exercise: Choose another dataset and plot a similar histogram.
+    <a class="reference internal nav-link" href="#exercise-choose-another-peak-and-zoom-into-it-do-you-know-which-particle-it-represents">
+     Exercise: Choose another peak and zoom into it. Do you know which particle it represents?
     </a>
    </li>
   </ul>
@@ -528,8 +528,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram">
-     Exercise: Choose another dataset and plot a similar histogram.
+    <a class="reference internal nav-link" href="#exercise-choose-another-peak-and-zoom-into-it-do-you-know-which-particle-it-represents">
+     Exercise: Choose another peak and zoom into it. Do you know which particle it represents?
     </a>
    </li>
   </ul>
@@ -921,176 +921,15 @@ Name: 1, dtype: float64
 <p>Let’s import another dataset and make a histogram of its invariant mass.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_muons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/307/files/Zmumu.csv&quot;</span><span class="p">)</span>
-<span class="n">two_muons</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dimuon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://cern.ch/opendata/record/545/files/Dimuon_DoubleMu.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Type</th>
-      <th>Run</th>
-      <th>Event</th>
-      <th>E1</th>
-      <th>px1</th>
-      <th>py1</th>
-      <th>pz1</th>
-      <th>pt1</th>
-      <th>eta1</th>
-      <th>phi1</th>
-      <th>Q1</th>
-      <th>E2</th>
-      <th>px2</th>
-      <th>py2</th>
-      <th>pz2</th>
-      <th>pt2</th>
-      <th>eta2</th>
-      <th>phi2</th>
-      <th>Q2</th>
-      <th>M</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>GT</td>
-      <td>148031</td>
-      <td>10507008</td>
-      <td>82.201866</td>
-      <td>-41.195288</td>
-      <td>17.433244</td>
-      <td>-68.964962</td>
-      <td>44.7322</td>
-      <td>-1.217690</td>
-      <td>2.741260</td>
-      <td>1</td>
-      <td>60.621875</td>
-      <td>34.144437</td>
-      <td>-16.119525</td>
-      <td>-47.426984</td>
-      <td>38.8311</td>
-      <td>-1.05139</td>
-      <td>-0.440873</td>
-      <td>-1</td>
-      <td>82.462692</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>TT</td>
-      <td>148031</td>
-      <td>10507008</td>
-      <td>62.344929</td>
-      <td>35.118050</td>
-      <td>-16.570362</td>
-      <td>-48.775247</td>
-      <td>38.8311</td>
-      <td>-1.051390</td>
-      <td>-0.440873</td>
-      <td>-1</td>
-      <td>82.201866</td>
-      <td>-41.195288</td>
-      <td>17.433244</td>
-      <td>-68.964962</td>
-      <td>44.7322</td>
-      <td>-1.21769</td>
-      <td>2.741260</td>
-      <td>1</td>
-      <td>83.626204</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>GT</td>
-      <td>148031</td>
-      <td>10507008</td>
-      <td>62.344929</td>
-      <td>35.118050</td>
-      <td>-16.570362</td>
-      <td>-48.775247</td>
-      <td>38.8311</td>
-      <td>-1.051390</td>
-      <td>-0.440873</td>
-      <td>-1</td>
-      <td>81.582778</td>
-      <td>-40.883323</td>
-      <td>17.299297</td>
-      <td>-68.447255</td>
-      <td>44.7322</td>
-      <td>-1.21769</td>
-      <td>2.741260</td>
-      <td>1</td>
-      <td>83.308465</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>GG</td>
-      <td>148031</td>
-      <td>10507008</td>
-      <td>60.621875</td>
-      <td>34.144437</td>
-      <td>-16.119525</td>
-      <td>-47.426984</td>
-      <td>38.8311</td>
-      <td>-1.051390</td>
-      <td>-0.440873</td>
-      <td>-1</td>
-      <td>81.582778</td>
-      <td>-40.883323</td>
-      <td>17.299297</td>
-      <td>-68.447255</td>
-      <td>44.7322</td>
-      <td>-1.21769</td>
-      <td>2.741260</td>
-      <td>1</td>
-      <td>82.149373</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>GT</td>
-      <td>148031</td>
-      <td>105238546</td>
-      <td>41.826389</td>
-      <td>22.783582</td>
-      <td>15.036444</td>
-      <td>-31.689894</td>
-      <td>27.2981</td>
-      <td>-0.990688</td>
-      <td>0.583351</td>
-      <td>1</td>
-      <td>49.760726</td>
-      <td>-20.177373</td>
-      <td>-9.354149</td>
-      <td>44.513955</td>
-      <td>21.8913</td>
-      <td>1.44434</td>
-      <td>-2.707650</td>
-      <td>-1</td>
-      <td>90.469123</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Save the invariant mass in a variable</span>
-<span class="n">invariant_mass1</span> <span class="o">=</span> <span class="n">two_muons</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="n">invariant_mass1</span> <span class="o">=</span> <span class="n">dimuon</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
 
 <span class="c1"># Plot the histogram with the function hist() of the matplotlib.pyplot module:</span>
 <span class="c1"># (http://matplotlib.org/api/pyplot_api.html?highlight=matplotlib.pyplot.hist#matplotlib.pyplot.hist).</span>
@@ -1112,22 +951,63 @@ Name: 1, dtype: float64
 <img alt="../_images/jupyter-notebook-tutorial_35_0.png" src="../_images/jupyter-notebook-tutorial_35_0.png" />
 </div>
 </div>
-<section id="exercise-choose-another-dataset-and-plot-a-similar-histogram">
-<h3>Exercise: Choose another dataset and plot a similar histogram.<a class="headerlink" href="#exercise-choose-another-dataset-and-plot-a-similar-histogram" title="Permalink to this headline">#</a></h3>
+<p>On the plot we can see multiple peaks. We can zoom into them one at a time by adding a “range” argument:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass1</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
+
+<span class="c1"># Name the axes and give the title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariant mass [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of collisions&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The invariant mass of two muons&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Show the plot.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/jupyter-notebook-tutorial_37_0.png" src="../_images/jupyter-notebook-tutorial_37_0.png" />
+</div>
+</div>
+<p>Now we can see more clearly that there is a peak at  around 91 GeV. This means that the muons are from a particle that has a mass of 91 GeV. This particle is known as the Z boson.</p>
+<section id="exercise-choose-another-peak-and-zoom-into-it-do-you-know-which-particle-it-represents">
+<h3>Exercise: Choose another peak and zoom into it. Do you know which particle it represents?<a class="headerlink" href="#exercise-choose-another-peak-and-zoom-into-it-do-you-know-which-particle-it-represents" title="Permalink to this headline">#</a></h3>
 </section>
 </section>
 <section id="additional-material">
 <h2>5. Additional material<a class="headerlink" href="#additional-material" title="Permalink to this headline">#</a></h2>
 <p>In the dataset we chose the invariant mass had already been calculated. Often we have to calculate the variable we are interested in ourselves. Let’s now try to calculate the invariant mass of two muons.</p>
-<p>The invariant mass of two particles is given by
-<span class="math notranslate nohighlight">\( M = \sqrt{(E_1+E_2)^2-|| p_1+p_2 ||^2} = \sqrt{(E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2)} \)</span></p>
-<p>Now we can calculate the invariant mass knowing that we can choose the variables by <strong>two_muons[‘E1’]</strong> etc. Remember that before every complex mathematical function you must define that it comes from the numpy library, which we imported and which we defined as np (e.g. <strong>np.sqrt(your_value)</strong>).</p>
+<p>The square of the invariant mass of two particles is given by
+<span class="math notranslate nohighlight">\( M^2 = (E_1+E_2)^2-|| p_1+p_2 ||^2 = (E_1+E_2)^2-((p_{1_x}+p_{2_x})^2+(p_{1_y}+p_{2_y})^2+(p_{1_z}+p_{2_z})^2) \)</span></p>
+<p>Now we can calculate the invariant mass knowing that we can choose the variables by <strong>dimuon[‘E1’]</strong> etc. Remember that before every complex mathematical function you must define that it comes from the numpy library, which we imported and which we defined as np (e.g. <strong>np.sqrt(your_value)</strong>).</p>
 <p>Additionally, we can use powers without the numpy library using the **-operator (e.g. x^2 is written as x**2).</p>
 <section id="exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2">
 <h3>Exercise: Calculate the invariant mass for all the collisions and save it in the variable ‘invariant_mass2’.<a class="headerlink" href="#exercise-calculate-the-invariant-mass-for-all-the-collisions-and-save-it-in-the-variable-invariant-mass2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the squared mass here (remove the hash symbol below)</span>
+<span class="c1"># mass_squared = </span>
+
+<span class="c1"># We must filter out the negative values</span>
+<span class="n">invariant_mass2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mass_squared</span><span class="p">[</span><span class="n">mass_squared</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">invariant_mass2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [17],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Calculate the squared mass here (remove the hash symbol below)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># mass_squared = </span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># We must filter out the negative values</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">invariant_mass2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mass_squared</span><span class="p">[</span><span class="n">mass_squared</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">invariant_mass2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;mass_squared&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1150,7 +1030,7 @@ Name: 1, dtype: float64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [17],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [18],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariant_mass2</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Name the axes and give the title</span>
@@ -1164,7 +1044,6 @@ Name: 1, dtype: float64
 </div>
 </div>
 </div>
-<p>We see that there appears a peak at around 91 GeV. This is because the muons are from a particle that has a mass of 91 GeV. This particle is known as Z-boson.</p>
 </section>
 </section>
 </section>
