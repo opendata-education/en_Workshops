@@ -8,6 +8,7 @@ chapters:
   sections:
   - file: exercises/jupyter-notebook-tutorial
   - file: exercises/Hunting-the-Higgs-4leptons
+  - file: exercises/discussion
   - file: exercises/Physics_variables
 - file: exercises/templates
   sections:
