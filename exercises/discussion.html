@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>CERN Teacher workshop &#8212; Workshops</title>
+    <title>Open-ended exercises &#8212; Workshops</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://opendata-education.github.io/Workshops/intro.html/exercises/teacher-workshop.html" />
+    <link rel="canonical" href="https://opendata-education.github.io/Workshops/intro.html/exercises/discussion.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="What is the Jupyter Notebook?" href="jupyter-notebook-tutorial.html" />
-    <link rel="prev" title="Welcome" href="../intro.html" />
+    <link rel="next" title="Physics variables cheat sheet" href="Physics_variables.html" />
+    <link rel="prev" title="Higgs hunting - an example of scientific research" href="Hunting-the-Higgs-4leptons.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -117,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="teacher-workshop.html">
    CERN Teacher workshop
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -125,7 +125,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="jupyter-notebook-tutorial.html">
      What is the Jupyter Notebook?
@@ -136,8 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
      Higgs hunting - an example of scientific research
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="discussion.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Open-ended exercises
     </a>
    </li>
@@ -221,6 +221,53 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/opendata-education/en_Workshops/main?urlpath=tree/content/exercises/discussion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/opendata-education/en_Workshops/blob/main/content/exercises/discussion.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -260,7 +307,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/opendata-education/en_Workshops/issues/new?title=Issue%20on%20page%20%2Fexercises/teacher-workshop.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/opendata-education/en_Workshops/issues/new?title=Issue%20on%20page%20%2Fexercises/discussion.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -288,7 +335,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/exercises/teacher-workshop.md"
+        <a href="../_sources/exercises/discussion.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +346,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -325,23 +372,84 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#critical-look-at-data-publishing">
+   1. Critical look at data publishing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datasets">
+     Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discussion-questions">
+   2. Discussion questions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CERN Teacher workshop</h1>
+                <h1>Open-ended exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#critical-look-at-data-publishing">
+   1. Critical look at data publishing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datasets">
+     Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discussion-questions">
+   2. Discussion questions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -349,10 +457,43 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="cern-teacher-workshop">
-<h1>CERN Teacher workshop<a class="headerlink" href="#cern-teacher-workshop" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="open-ended-exercises">
+<h1>Open-ended exercises<a class="headerlink" href="#open-ended-exercises" title="Permalink to this headline">#</a></h1>
+<section id="critical-look-at-data-publishing">
+<h2>1. Critical look at data publishing<a class="headerlink" href="#critical-look-at-data-publishing" title="Permalink to this headline">#</a></h2>
+<p>Publishing data is great, but presenting it in a form that is actually useful for consumers is also important. The next exercise takes a critical look at different ways data is published. The exercise is meant to do in pairs of two.</p>
+<p>Below is a list of data sources; choose one of them. Depending on the source you might have to choose the variables to choose the specific dataset you want to explore. Your job is to analyze the dataset through the lens of a consumer of open data.</p>
+<p>Some aspects you might want to think about:
+Does the title and description of the dataset match its content?
+Do I understand the dataset and its different variables?
+What questions could I answer using the data?
+Is the data clean?
+What can I use the data for? Is it open data?
+How much effort would it take to make the data usable?
+Can I find what the data has been used for?</p>
+<p>After this you can think how you would change the publication of the dataset. How would you improve the customer experience?
+Don’t hesitate playing with the dataset by e.g. importing it into this notebook and trying out different things with it. You can also use other tools if you wish to.</p>
+<section id="datasets">
+<h3>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Our World In Data - <a class="reference external" href="https://ourworldindata.org/explorers/co2?facet=none&amp;country=CHN~USA~IND~GBR~OWID_WRL&amp;Gas=CO%E2%82%82&amp;Accounting=Production-based&amp;Fuel=Total&amp;Count=Per+capita">CO2 Data Explorer</a></p></li>
+<li><p>Electrical half hourly raw and cleaned datasets for Great Britain from 2008-11-05: <a class="reference external" href="https://zenodo.org/record/6958310#.Yv9dx3ZBy3A">https://zenodo.org/record/6958310#.Yv9dx3ZBy3A</a></p></li>
+<li><p>Choose a dataset from the Solar Influence Data Center. <a class="reference external" href="https://www.sidc.be/silso/datafiles">https://www.sidc.be/silso/datafiles</a></p></li>
+<li><p>World Bank Gender statistics: <a class="reference external" href="https://databank.worldbank.org/source/gender-statistics">https://databank.worldbank.org/source/gender-statistics</a></p></li>
+<li><p>Google Trends: search term “CERN” (you can also choose another search term or compare “CERN” to some other term) <a class="reference external" href="https://trends.google.com/trends/explore?geo=FR&amp;q=CERN">https://trends.google.com/trends/explore?geo=FR&amp;q=CERN</a></p></li>
+</ul>
+</section>
+</section>
+<section id="discussion-questions">
+<h2>2. Discussion questions<a class="headerlink" href="#discussion-questions" title="Permalink to this headline">#</a></h2>
+<p>The following exercise is meant to be done in groups of three or four. Below is a list of open-ended questions. Go through them one at a time. It’s fine if you don’t go over all of the questions; if some question generates a lot of discussion, feel free to continue with it.</p>
+<ul class="simple">
+<li><p>What are the benefits of open data as opposed to other forms of data publishing?</p></li>
+<li><p>Is science communication important? Why/why not? How could an individual scientist develop their science communication?</p></li>
+<li><p>Think about some course that you’ve taken. Would it have been useful to utilize open data in that course? What about Jupyter notebooks?</p></li>
+<li><p>Would it be useful for you to present your summer project in the notebook format? What about some other projects you’ve been a part of?</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -382,17 +523,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Hunting-the-Higgs-4leptons.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome</p>
+            <p class="prev-next-title">Higgs hunting - an example of scientific research</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="jupyter-notebook-tutorial.html" title="next page">
+    <a class='right-next' id="next-link" href="Physics_variables.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">What is the Jupyter Notebook?</p>
+        <p class="prev-next-title">Physics variables cheat sheet</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
